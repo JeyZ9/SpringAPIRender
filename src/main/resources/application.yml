@@ -38,6 +38,6 @@ file:
   upload-dir: "./uploads"
 
 # Render with Docker
-spring.datasource.url=${SPRING_DATASOURCE_URL:jdbc:postgresql://xxx:5432/springstoredb}
-spring.datasource.username=${SPRING_DATASOURCE_USERNAME:xxx}
-spring.datasource.password=${SPRING_DATASOURCE_PASSWORD:xxx}
+# spring.datasource.url=${SPRING_DATASOURCE_URL:jdbc:postgresql://xxx:5432/springstoredb}
+# spring.datasource.username=${SPRING_DATASOURCE_USERNAME:xxx}
+# spring.datasource.password=${SPRING_DATASOURCE_PASSWORD:xxx}
