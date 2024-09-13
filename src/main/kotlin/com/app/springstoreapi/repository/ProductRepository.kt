@@ -18,11 +18,11 @@ interface ProductRepository:JpaRepository<Product, Long> {
         p.id, 
         p.productName, 
         p.unitPrice, 
-        p.unitStock, 
+        p.unitInStock, 
         p.productPicture, 
         c.id, 
         c.categoryName, 
-        p.createDate, 
+        p.createdDate, 
         p.modifiedDate)
     FROM Product p 
     JOIN Category c ON p.categoryId = c.id
@@ -37,7 +37,7 @@ interface ProductRepository:JpaRepository<Product, Long> {
     ): Page<ProductCategoryDTO>
 
     @Query("""
-        SELECT new com.app.springstoreapi.dto.ProductCategoryDTO(p.id, p.productName, p.unitPrice, p.unitStock, p.productPicture, c.id, c.categoryName, p.createDate, p.modifiedDate)
+        SELECT new com.app.springstoreapi.dto.ProductCategoryDTO(p.id, p.productName, p.unitPrice, p.unitInStock, p.productPicture, c.id, c.categoryName, p.createdDate, p.modifiedDate)
     FROM Product p 
     JOIN Category c ON p.categoryId = c.id
     WHERE p.id = :id 
